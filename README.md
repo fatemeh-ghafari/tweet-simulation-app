@@ -30,4 +30,4 @@ This project is a simulation of a Twitter-like social media platform built using
 
 1. Clone the repository:
    
-   git clone https://github.com/fatemeh-ghafari/vue-simx.git
+   git clone  https://github.com/fatemeh-ghafari/tweet-simulation-app.git
