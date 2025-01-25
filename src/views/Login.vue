@@ -76,10 +76,7 @@ export default {
         this.$store.dispatch('setLoginInfo', response.data.user)
         return this.$router.push('/')
       }catch(err) {
-        this.$notification({
-          type: 'error',
-          message: 'Failed when authentication'
-        })
+     
       }
     },
     validateForm: function(){

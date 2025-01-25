@@ -85,7 +85,6 @@ export default {
     const store = useStore();
 
     const app = getCurrentInstance();
-    const $notification = app.parent.appContext.config.globalProperties.$notification;
 
     function defaultTweetContent(){
       return {
@@ -100,18 +99,7 @@ export default {
         photos: tweetContent.value.imageList
       }
       const newTweet = new Tweet(new User(store.getters.getMe), newTweetContent);
-      try{
         await uploadTweet(newTweet);
-        $notification({
-          type: 'info',
-          message: 'Tweet sent!'
-        })
-      }catch(err){
-        $notification({
-          type: 'error',
-          message: 'Error in send tweet'
-        })
-      }
 
       context.emit('submit-click')
       tweetContent.value = defaultTweetContent();

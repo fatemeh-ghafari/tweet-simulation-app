@@ -45,10 +45,7 @@ export default {
       const trends = response.data.trends;
       this.trends = trends;
     } catch(err){
-      this.$notification({
-        type: 'error',
-        message: 'Error when fetching trends'
-      })
+  
     }
   },
 }

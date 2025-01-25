@@ -103,10 +103,6 @@ export default {
       try{
         await this.$store.dispatch('setMyInfo', {...this.userData})
       }catch(err){
-        this.$notification({
-          type: 'error',
-          message: 'Error when editing profile'
-        })
       }
     },
     handleClickOutside: function(e) {

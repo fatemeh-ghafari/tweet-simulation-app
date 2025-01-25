@@ -40,14 +40,8 @@ export default {
   },
   methods: {
     async handleTweetSubmit(){
-      try{
-        await this.getTweets();
-      }catch(err){
-        this.$notification({
-          type: 'error',
-          message: 'Error in send tweet'
-        })
-      }
+      await this.getTweets();
+
     },
     getTweets: async function(){
       const response = await getTweets();

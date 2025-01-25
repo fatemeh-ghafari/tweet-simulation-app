@@ -6,20 +6,21 @@ const userData = [
     username: 'fatemeh',
     password: 'password',
     profile: {
-      pic: '',
-      pic_full: '',
-      pic_cover: '',
+      pic: require('@/assets/images/pic.png'), // مسیر تصویر پروفایل
+      pic_full: require('@/assets/images/pic.png'), // عکس پروفایل بزرگ
+      pic_cover: require('@/assets/images/pic2.jpg'), // عکس کاور
       description: 'add Title .... ):',
       nickname: '@fatemeh',
       name: 'Fatemeh GH',
-      website: 'https://fatemeh.com'
+      website: 'https://fatemeh.com',
     },
     account: {
-      following: '254',
-      follower: '1.1K'
-    }
-  }
+      following: 254, // تعداد کسانی که دنبال می‌کنه
+      follower: 1100, // تعداد دنبال‌کننده‌ها (به صورت عدد)
+    },
+  },
 ]
+
 
 export const users = [
   new User(userData[0])

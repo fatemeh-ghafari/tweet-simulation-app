@@ -60,10 +60,6 @@ export default {
       this.userTweets = response.data.tweets;
       this.$store.commit("setProfileTweetCount", response.data.tweets.length)
       }catch(err){
-        this.$notification({
-          type: 'error',
-          message: 'Error when fetching tweets'
-        })
       }
     }
   },

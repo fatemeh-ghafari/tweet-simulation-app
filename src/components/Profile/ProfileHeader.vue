@@ -79,16 +79,9 @@ export default {
     }
   },
   async mounted(){
-    try {
-      const response = await getMe({id: this.getMyProfileId});
+    const response = await getMe({id: this.getMyProfileId});
       this.$store.commit('setMe', response.data);
       return
-    } catch (err) {
-      this.$notification({
-        type: 'error',
-        message: 'Error when fetching user data'
-      })
-    }
   },
   methods:{
     moment

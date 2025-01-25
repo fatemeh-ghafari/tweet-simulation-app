@@ -11,9 +11,6 @@ export default {
   getLoadingStatus: (state) => {
     return state.globalIsLoading
   },
-  getActiveNotifications(state) {
-    return state.activeNotifications;
-  },
   getMyProfileId(state) {
     return state.me.id;
   },
@@ -22,9 +19,6 @@ export default {
   },
   getProfileTweetCount(state) {
     return state.profileTweetCount
-  },
-  getLightboxState(state){
-    return state.lightbox
   },
   getMobileMenuState(state){
     return state.isMobileMenuActive

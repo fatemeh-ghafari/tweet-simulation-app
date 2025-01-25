@@ -34,10 +34,7 @@
               :key="i"
               class="tweet-content-image-item"
             >
-              <img
-                :src="tweetPhoto.url"
-                @click="$store.dispatch('setLightbox', tweetImages)"
-              >
+             
             </div>
           </div>
         </div>
@@ -136,18 +133,6 @@ export default {
       const request = {
         id: this.tweetData.id,
         content: this.editedTweetData
-      }
-      try{
-        await updateTweet(request)
-        this.$notification({
-          type: 'success',
-          message: 'Tweet is edited succesfully!'
-        })
-      }catch{
-        this.$notification({
-          type: 'error',
-          message: 'Error when editing tweet!'
-        })
       }
       this.isTweetEditing = false
     },

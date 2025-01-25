@@ -38,10 +38,6 @@
       </div>
     </div>
     <tweet-popup v-if="getTweetPopupState" />
-    <Lightbox
-      v-if="getLightboxState.state"
-      :images="getLightboxState.images"
-    />
     <div
       class="mobile-menu-toggler"
       @click="$store.commit('setMobileMenuState', !getMobileMenuState)"
@@ -57,7 +53,6 @@ import Trends from '@/components/Trends'
 import SearchBar from '@/components/SearchBar'
 import BaseIcon from '@/components/BaseIcon'
 import TweetPopup from '@/components/TweetPopup'
-import Lightbox from '@/components/Lightbox'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -68,14 +63,12 @@ export default {
     BaseIcon,
     Trends,
     SearchBar,
-    Lightbox
   },
   computed: {
     ...mapGetters([
       'getMe',
       'getTweetPopupState',
       'getProfileTweetCount', 
-      'getLightboxState',
       'getMobileMenuState'
     ])
   }

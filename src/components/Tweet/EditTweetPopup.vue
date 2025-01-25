@@ -41,17 +41,11 @@ export default {
       try{
         await deleteTweet({
           tweetId: this.tweetId
-        });
-        this.$notification({
-          type: 'success',
-          message: `Tweet deleted.`
-        })
+        });   
+     
         this.$emit('delete-tweet')
       }catch(err){
-        this.$notification({
-          type: 'error',
-          message: 'Error when delete tweet'
-        })
+     
       }
     },
     handleEdit(){
